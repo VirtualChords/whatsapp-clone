@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+    /* margin: 0; */
+}
+
+.container{
+    width: 100%;
+    position: relative;
+}
+
+.unread {
+    display: flex;
+    flex-flow: column;
+}
+
+.unread-active {
+    color: #34b7f1;
+}
+
+.unread-badge {
+    color: white;
+    background-color: #34b7f1;
+    padding: 0 3px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 4px 0;
+    font-size: small;
+    height: 15px;
+}
+
+.navigations {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0 0 0;
+    background-color: rgb(29, 29, 29);
+    z-index: 1;
+}
+
+.navigations * {
+    background: transparent;
+}
+
+.navigations a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: auto;
+}
+
+.navigations .active * {
+    color: #34b7f1;
+}
+
+.navigations a i {
+    color: gray;
+    font-size: 1.5rem;
+}
+
+.navigations p {
+    font-size: x-small;
+    color: gray;
+    margin: 0;
+    padding: .1rem 0;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+.top-actions>* {
+    padding: 0;
+    margin: 0;
+    color: #34b7f1;
+}
+
+.main-page>.heading>h1 {
+    padding: 0.5rem 0 0 0;
+    margin: 5px;
+}
+
+.search-sort {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90% auto;
+    justify-content: space-around;
+    height: 1.5rem;
+    padding: 1rem 0;
+}
+.search-sort * {
+    padding: auto;
+}
+
+.search-sort>.search {
+    border: none;
+    background-color: rgb(29, 29, 29);
+    border-radius: 8px;
+}
+
+.search-sort>.bi-filter {
+    color: #34b7f1;
+    font-size: 1.2rem;
+    padding: auto;
+    align-self: center;
+}
+
+.new-actions {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.2px solid #a9a9a933;
+    padding: 10px 5px;
+}
+
+.new-actions a {
+    text-decoration: none;
+    /* color: #7878ff; */
+    color: #34b7f1;
+}
+
+.chats {
+
+}
+
+.chat {
+    display: grid;
+    grid-template-columns: 4.3em auto;
+    padding: .3em;
+}
+
+.pic-container {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 3.4em;
+    height: 3.4em;
+    align-self: center;
+    justify-self: center;
+}
+
+.pic-container img {
+    width: inherit;
+    object-fit: cover;
+}
+
+.chat-details {
+    width: inherit;
+    border-bottom: 0.2px solid #a9a9a933;
+    padding: 10px 0;
+}
+
+.chat-specs {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.chat-specs strong{
+    font-size: .9em;
+}
+
+/* for status */
+.my-status {
+    background-color: rgb(29, 29, 29);
+    padding: 5px;
+    border-top: 1px solid rgb(68, 68, 68);
+    border-bottom: 1px solid rgb(68, 68, 68);
+    margin-bottom: 1rem;
+}
+
+.my-status .pic-container {
+    /* padding: 1px; */
+    /* content: ''; */
+    border: 2px solid #34b7f1;
+}
+
+.my-status * {
+    background: transparent;
+}
+
+.my-status .chat-details {
+    width: inherit;
+    border-bottom: none;
+    padding: 10px 0;
+}
+.search-sort.status-search {
+    /* width: 100%; */
+    display: flex;
+}
+
+.search-sort.status-search>.search {
+    width: 100%;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+.updates {
+    font-size: x-small;
+    margin-bottom: .4em;
+    margin-left: .4em;
+}
+
+.statuses strong {
+    font-size: small;
+}
+
+.statuses .chat-details {
+    width: inherit;
+    border-bottom: 0.2px solid #a9a9a933;
+    padding: 17px 0;
+}
+
+
+.chat-specs .actions {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: -0.8em;
+}
+.chat-specs .actions i {
+    color: #34b7f1;
+    background-color: rgb(51, 51, 51);
+    padding: 5px 6px;
+    border-radius: 15px;
+    margin: 0 5px;
+    align-self: center;
+}
+
+.statuses {
+    background-color: rgb(29, 29, 29);
+}
+
+.statuses .pic-container {
+    width: 3em;
+    height: 3em;
+}
+
+.statuses * {
+    background: transparent;
+}
+
+.chat-message-sneak {
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.chat-message-sneak>small:nth-child(1) {
+    width: 87%;
+}
+
+small {
+    color: gray;
+}
+
+/* calls */
+.calls .pic-container {
+    width: 3em;
+    height: 3em;
+}
+
+.calls .chat-specs {
+    position: relative;
+}
+
+.calls .chat-specs .day-info {
+    position: absolute;
+    right: 0;
+    top: .5em;
+}
+
+.calls .day-info>small {
+    margin: 0 7px;
+}
+
+.calls strong {
+    font-weight: 400;
+}
+
+.calls .missed {
+    color: red;
+}
+
+.calls .chat-details {
+    padding-top: 0;
+}
+
+.calls .chat-details:nth-child(1) {
+    border-top: 0.2px solid #a9a9a933;
+    margin-top: 1rem;
+}
+
+.calls .bi-telephone-fill {
+    color: gray;
+    font-size: x-small;
+    margin: 0 5px 0 0;
+}
+
+.calls .bi-info-circle {
+    color: #34b7f1;
+}
+
+.switch {
+    display: flex;
+    background-color: rgb(37, 37, 37);
+    border-radius: 5px;
+}
+
+.switch p {
+    padding: 5px;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.switch p.switch-active {
+    background-color: rgb(75, 75, 75);
+}
